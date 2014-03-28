@@ -9,6 +9,8 @@ class Commander
   Y = 1
   DIRECTION = 2
 
+attr_accessor :rover 
+
   def create_rover(starting_point)
     coords = starting_point.split(" ")
     @rover = Rover.new(coords[X], coords[Y], coords[DIRECTION])
@@ -30,3 +32,7 @@ end
 command = Commander.new
 command.create_rover("1 2 N")
 puts command.rover.x
+
+command2 = Commander.new
+command2.create_rover("5 1 E")
+puts command2.rover.x
