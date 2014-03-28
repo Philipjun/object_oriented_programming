@@ -29,4 +29,4 @@ end
 
 command = Commander.new
 command.create_rover("1 2 N")
-
+puts command.rover.x
